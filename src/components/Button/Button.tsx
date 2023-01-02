@@ -1,8 +1,13 @@
 import { FC } from "react";
 import './Button.scss';
 
-const Button:FC = () => {
+interface ButtonProps {
+    text: string;
+}
+
+const Button:FC<ButtonProps> = (props) => {
     return <>
+        <button className="Button">{props.text}</button>
     </>
 }
 
